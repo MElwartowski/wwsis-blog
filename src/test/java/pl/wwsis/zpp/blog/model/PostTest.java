@@ -2,6 +2,8 @@ package pl.wwsis.zpp.blog.model;
 
 import static org.junit.Assert.*;
 
+import java.util.List;
+
 import org.junit.Test;
 
 
@@ -27,5 +29,17 @@ public class PostTest {
 		
 		assertEquals(1, p.getComments().size());
 		assertTrue(p.getComments().contains(comment));
+	}
+	
+	@Test
+	public void returnedCommentListShouldBeUnmodifiable() {
+		List<Comment> comments = p.getComments();
+		
+		try {
+			comments.add(new Comment("tester", "testowy komentarz")); // niedozwolone, komentarze można dodać tylko metodą addComment klasy Post
+			fail("exception was expected!");
+		} catch (Exception e) {
+			// ok
+		}
 	}
 }
