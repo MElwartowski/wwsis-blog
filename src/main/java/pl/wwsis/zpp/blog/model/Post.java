@@ -11,7 +11,7 @@ public class Post {
 	private String title;
 	private String text;
 	
-	private List<Comment> comments = new ArrayList<Comment>();
+	protected List<Comment> comments = new ArrayList<Comment>();
 	
 	public Post(String title, String text) {
 		this.date = new Date();
