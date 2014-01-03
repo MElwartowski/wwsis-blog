@@ -11,4 +11,6 @@ public interface PostApi {
 	Set<String> getTags();
 	
 	List<Comment> getLastComments();
+	
+	List<Comment> getComments();
 }
