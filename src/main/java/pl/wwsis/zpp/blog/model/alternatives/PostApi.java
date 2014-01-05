@@ -13,4 +13,5 @@ public interface PostApi {
 	List<Comment> getLastComments();
 	
 	List<Comment> getComments();
+	void addComment(Comment c);
 }

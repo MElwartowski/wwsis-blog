@@ -35,7 +35,7 @@ public class Post2 extends Post implements PostApi {
 				return o2.getDate().compareTo(o1.getDate());
 			}
 		});
-		if (comments.size() > 3) {
+		if (comments.size() < 4) {
 			return getComments();
 		} else {
 			return Arrays.asList(comments.get(0), comments.get(1), comments.get(2));
